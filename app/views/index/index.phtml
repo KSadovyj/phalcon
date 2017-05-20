@@ -14,11 +14,13 @@
     <div class="login">
        <p><h1>Результаты поиска</h1></p>
      
-        <?php
-         foreach($results as $result){                                   // выводим результат 
-                echo $result->title.'<br>';   
-             }
-             echo '<hr>';
+         <?php
+        
+          for($j=0;$j<count($results[0]);$j++){
+          echo $results[0][$j].'<br>';
+         }
+         
+        
         ?>
      
      </div>
