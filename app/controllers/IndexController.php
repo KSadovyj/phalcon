@@ -9,8 +9,12 @@ class IndexController extends ControllerBase
         $URL = 'http://midexpress.com.ua/smartfony-i-telefony.html';
         
         $html = file_get_html($URL);                           // получаемы контент каждой страницы
-        $result = $html->find('div.grid_4 div.prodtitle a[title]');     // ищем объекты с нужными нам тегами
         
+        preg_match_all('#<img alt="(.+?)" src#is',
+          $html,
+          $result, PREG_PATTERN_ORDER);
+        
+  
         $this->view->setVar('results', $result);
     }
 }
