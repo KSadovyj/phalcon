@@ -6,7 +6,7 @@ class IndexController extends ControllerBase
 
     public function indexAction()
     {
-        $URL = 'http://midexpress.com.ua/smartfony-i-telefony.html';
+        $URL = 'http://midexpress.com.ua/smartfony-i-telefony.html';    // адрес страницы, на которой производится поиск названий товаров
         
         $html = file_get_html($URL);                           // получаемы контент каждой страницы
         
